@@ -4,6 +4,7 @@ package com.sunrise.security.domain;
 import com.sunrise.security.BaseIntegrationTests;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -27,6 +28,7 @@ public class UserRepositoryTest extends BaseIntegrationTests{
     }
 
     @Test
+    @Ignore
     public void shouldFindUserByUsername() throws Exception {
         userRepository.save(new User("root", "root", "testName", "test@email.com", userRole));
         User user = userRepository.findByUsername("root");
