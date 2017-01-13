@@ -1,6 +1,5 @@
 package com.sunrise.security;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = SunriseUserManagementApplication.class)
-@TestPropertySource(locations = "classpath:application.yaml")
+@TestPropertySource(locations = "classpath:application-${spring.profiles.active}.properties")
 public class BaseIntegrationTests {
 
     @Test
