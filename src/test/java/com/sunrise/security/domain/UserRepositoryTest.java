@@ -28,7 +28,6 @@ public class UserRepositoryTest extends BaseIntegrationTests{
     }
 
     @Test
-    @Ignore
     public void shouldFindUserByUsername() throws Exception {
         userRepository.save(new User("root", "root", "testName", "test@email.com", userRole));
         User user = userRepository.findByUsername("root");
